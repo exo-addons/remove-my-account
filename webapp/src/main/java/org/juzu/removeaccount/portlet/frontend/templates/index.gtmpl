@@ -1,0 +1,5 @@
+#{param name=fullname/}
+<div class="remove-account-app-container">
+i am remove account app
+my name is <%=fullname%>
+</div>

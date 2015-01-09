@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+   http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+  <portlet>
+    <description xml:lang="EN">this application allows user to remove his account</description>
+    <portlet-name>JuZRemoveAccountFrontendPortlet</portlet-name>
+    <display-name xml:lang="EN">Juzu Remove Account Frontend Portlet</display-name>
+    <portlet-class>org.juzu.removeaccount.portlet.frontend.FrontendPortlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <portlet-info>
+      <title>Remove Account Application</title>
+      <short-title>Remove Account Portlet</short-title>
+      <keywords>remove-account-webapp</keywords>
+    </portlet-info>
+  </portlet>
+</portlet-app>
