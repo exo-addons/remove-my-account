@@ -46,7 +46,7 @@
             <field name="patterns">
               <collection type="java.util.ArrayList" item-type="java.lang.String">
                 <value>
-                  <string>/intranet/profile</string>
+                  <string>/intranet/profile/.*</string>
                 </value>
               </collection>
             </field>

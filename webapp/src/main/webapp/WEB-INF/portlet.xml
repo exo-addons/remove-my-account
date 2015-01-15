@@ -22,7 +22,7 @@
 
   <filter>
     <filter-name>RemoveAccountFilter</filter-name>
-    <filter-class>org.juzu.removeaccount.commons.filters.RemoveAccountFilter</filter-class>
+    <filter-class>org.juzu.removeaccount.commons.filters.RemoveAccountPortletFilter</filter-class>
     <lifecycle>RENDER_PHASE</lifecycle>
   </filter>
   <filter-mapping>

@@ -31,6 +31,7 @@
     <exo.portal.version>3.5.13-PLF</exo.portal.version>
     <exo.core.component.organization.version>2.5.11-GA</exo.core.component.organization.version>
     <exo.core.component.social.version>4.1-M2</exo.core.component.social.version>
+    <exo.kernel.commons.version>2.4.11-GA</exo.kernel.commons.version>
     <juzu.version>1.0.0-cr1</juzu.version>
     <!-- Dependency versions -->
     <junit.version>4.8.2</junit.version>
@@ -62,14 +63,12 @@
         <version>${exo.portal.version}</version>
         <scope>provided</scope>
       </dependency>
-
-      <!--dependency>
-        <groupId>org.gatein.portal</groupId>
-        <artifactId>exo.portal.webui.portal</artifactId>
-        <version>${exo.portal.version}</version>
+      <dependency>
+        <groupId>org.exoplatform.commons</groupId>
+        <artifactId>commons-component-common</artifactId>
+        <version>${exoplatform.version}</version>
         <scope>provided</scope>
-      </dependency-->
-
+      </dependency>
       <dependency>
         <groupId>org.exoplatform.core</groupId>
         <artifactId>exo.core.component.organization.api</artifactId>
