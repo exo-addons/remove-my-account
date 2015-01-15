@@ -19,15 +19,29 @@
     </portlet-info>
   </portlet>
 
+  <portlet>
+    <description xml:lang="EN">this application allows to add remove-account button in profile page</description>
+    <portlet-name>JuzRemoveAccountProfileApplication</portlet-name>
+    <display-name xml:lang="EN">Juzu Remove Account Profile Portlet</display-name>
+    <portlet-class>org.juzu.removeaccount.portlet.profile.ProfilePorlet</portlet-class>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <portlet-info>
+      <title>Remove Account Profile Application</title>
+      <short-title>Remove Account Profile Portlet</short-title>
+      <keywords>remove-account-webapp</keywords>
+    </portlet-info>
+  </portlet>
 
   <filter>
-    <filter-name>RemoveAccountFilter</filter-name>
+    <filter-name>RemoveAccountProfilePortletFilter</filter-name>
     <filter-class>org.juzu.removeaccount.commons.filters.RemoveAccountPortletFilter</filter-class>
     <lifecycle>RENDER_PHASE</lifecycle>
   </filter>
   <filter-mapping>
-    <filter-name>RemoveAccountFilter</filter-name>
-    <portlet-name>JuZRemoveAccountFrontendPortlet</portlet-name>
+    <filter-name>RemoveAccountProfilePortletFilter</filter-name>
+    <portlet-name>JuzRemoveAccountProfileApplication</portlet-name>
   </filter-mapping>
 
 </portlet-app>

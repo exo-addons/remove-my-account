@@ -1,5 +1,18 @@
-#{param name=fullname/}
-<div class="remove-account-app-container">
-i am remove account app
-my name is <%=fullname%>
+#{param name=email/}
+#{param name=reasons/}
+<div class="juzRemoveAccountFrontendPortletContainer">
+    <h3>It's been a pleasure to have you here</h3>
+    I would like to remove permanantely my account <%=email%> and associated data because:
+    <br/>
+    <% reasons.each { reason -> %>
+        <input type="radio" value="<%=reason.getId()%>" class="remove-account-reason"><%= reason.getContent()%>
+    <% } %>
+    <imput type="text" placeholder="Other" class="juz-other-reason" >
+
+    <br/>
+    I would like to keep in touch on Social media platform
+    <br/>
+    list soc here
+    <button class="btn btn-primary">Delete my account</button>
+    <a class="btn" href="/portal/intranet/profile">Cancel</a>
 </div>

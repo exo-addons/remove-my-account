@@ -2,6 +2,7 @@ package org.juzu.removeaccount.commons.filters;
 
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
+import org.exoplatform.social.webui.Utils;
 
 import javax.portlet.*;
 import javax.portlet.filter.FilterChain;
@@ -17,7 +18,7 @@ public class RemoveAccountPortletFilter implements RenderFilter {
 
   @Override
   public void doFilter(RenderRequest request, RenderResponse response, FilterChain chain) throws IOException, PortletException {
-    log.info("juzu filter do filter");
+    log.info("start append remove account btn for "+    Utils.getOwnerRemoteId()+" - "+Utils.getViewerRemoteId());
     chain.doFilter(request,response);
   }
 

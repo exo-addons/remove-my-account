@@ -6,6 +6,8 @@ import org.exoplatform.services.jcr.ext.hierarchy.NodeHierarchyCreator;
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
 import org.exoplatform.services.organization.OrganizationService;
+import org.exoplatform.services.organization.User;
+import org.json.JSONObject;
 import org.juzu.removeaccount.commons.models.Account;
 
 import javax.inject.Inject;
@@ -115,12 +117,18 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
   }
 
   @Override
-  public String getInfoUser(String username) {
+  public JSONObject getInfoUser(String username) {
+    JSONObject info = null;
     try {
-      return organizationService.getUserHandler().findUserByName(username).getEmail();
+      User user = organizationService.getUserHandler().findUserByName(username);
+      if (null != user){
+        info = new JSONObject();
+        info.put("username",username);
+        info.put("email",user.getEmail());
+      }
     } catch (Exception e) {
       e.printStackTrace();
     }
-    return null;
+    return info;
   }
 }

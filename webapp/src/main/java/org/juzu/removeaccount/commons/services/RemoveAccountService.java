@@ -1,5 +1,6 @@
 package org.juzu.removeaccount.commons.services;
 
+import org.json.JSONObject;
 import org.juzu.removeaccount.commons.models.Account;
 
 /**
@@ -7,5 +8,5 @@ import org.juzu.removeaccount.commons.models.Account;
  */
 public interface RemoveAccountService  {
   public Account storeAccount(Account account);
-  public String getInfoUser(String username);
+  public JSONObject getInfoUser(String username);
 }

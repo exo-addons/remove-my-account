@@ -20,6 +20,9 @@ import juzu.Path;
 import juzu.Response;
 import juzu.View;
 import juzu.request.SecurityContext;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.juzu.removeaccount.commons.models.Reason;
 import org.juzu.removeaccount.commons.services.RemoveAccountService;
 
 import javax.inject.Inject;
@@ -36,7 +39,14 @@ public class JuZFrontendApplication {
   @View
   public Response.Content index(SecurityContext securityContext){
     String currentUserName = securityContext.getUserPrincipal().getName();
-    String fullname = removeAccountService.getInfoUser(currentUserName);
-    return indexTpl.with().set("fullname",fullname).ok();
+    JSONObject info = removeAccountService.getInfoUser(currentUserName);
+    if (null != info){
+      try {
+        return indexTpl.with().set("email",info.get("email")).set("reasons", Reason.values()).ok();
+      } catch (JSONException e) {
+        e.printStackTrace();
+      }
+    }
+    return Response.ok("something went wrong, cannot get user info");
   }
 }
