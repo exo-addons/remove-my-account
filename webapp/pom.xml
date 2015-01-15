@@ -24,6 +24,11 @@
     </dependency>
 
     <dependency>
+      <groupId>org.gatein.portal</groupId>
+      <artifactId>exo.portal.component.web.api</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-core</artifactId>
     </dependency>
@@ -113,7 +118,6 @@
       <artifactId>guice</artifactId>
       <scope>provided</scope>
     </dependency>
-
   </dependencies>
 
   <build>

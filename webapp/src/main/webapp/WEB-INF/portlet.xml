@@ -18,4 +18,16 @@
       <keywords>remove-account-webapp</keywords>
     </portlet-info>
   </portlet>
+
+
+  <filter>
+    <filter-name>RemoveAccountFilter</filter-name>
+    <filter-class>org.juzu.removeaccount.commons.filters.RemoveAccountFilter</filter-class>
+    <lifecycle>RENDER_PHASE</lifecycle>
+  </filter>
+  <filter-mapping>
+    <filter-name>RemoveAccountFilter</filter-name>
+    <portlet-name>JuZRemoveAccountFrontendPortlet</portlet-name>
+  </filter-mapping>
+
 </portlet-app>

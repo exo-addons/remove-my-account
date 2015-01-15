@@ -15,6 +15,7 @@
   <name>Remove Account</name>
   <description>allow user to remove his account</description>
   <modules>
+    <module>lib</module>
     <module>config</module>
     <module>webapp</module>
     <module>bundle</module>
@@ -27,6 +28,7 @@
   </scm-->
   <properties>
     <exoplatform.version>4.1-M2</exoplatform.version>
+    <exo.portal.version>3.5.13-PLF</exo.portal.version>
     <exo.core.component.organization.version>2.5.11-GA</exo.core.component.organization.version>
     <exo.core.component.social.version>4.1-M2</exo.core.component.social.version>
     <juzu.version>1.0.0-cr1</juzu.version>
@@ -55,6 +57,20 @@
 
       <!-- Application dependencies-->
       <dependency>
+        <groupId>org.gatein.portal</groupId>
+        <artifactId>exo.portal.component.web.api</artifactId>
+        <version>${exo.portal.version}</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!--dependency>
+        <groupId>org.gatein.portal</groupId>
+        <artifactId>exo.portal.webui.portal</artifactId>
+        <version>${exo.portal.version}</version>
+        <scope>provided</scope>
+      </dependency-->
+
+      <dependency>
         <groupId>org.exoplatform.core</groupId>
         <artifactId>exo.core.component.organization.api</artifactId>
         <version>${exo.core.component.organization.version}</version>
@@ -66,7 +82,13 @@
         <version>${exo.core.component.social.version}</version>
         <scope>provided</scope>
       </dependency>
-
+      <!--dependency>
+        <groupId>org.exoplatform.platform</groupId>
+        <artifactId>platform</artifactId>
+        <version>${exoplatform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency-->
       <dependency>
         <groupId>org.juzu</groupId>
         <artifactId>juzu-core</artifactId>
@@ -149,6 +171,11 @@
         <version>3.0</version>
       </dependency>
 
+      <dependency>
+        <groupId>org.exoplatform.addons.remove-account</groupId>
+        <artifactId>remove-account-lib</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.exoplatform.addons.remove-account</groupId>
         <artifactId>remove-account-webapp</artifactId>
