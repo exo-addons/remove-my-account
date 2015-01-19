@@ -55,9 +55,15 @@ public class JuZFrontendApplication {
   @Ajax
   @Resource
   public Response doRemoveMyAccount(SecurityContext securityContext, String reason, String unSubscribeMktEmail){
+    String reasonContent = "";
+    try {
+      reasonContent  = Reason.getReason(Integer.parseInt(reason)).getContent();
+    } catch(NumberFormatException e) {
+      reasonContent = reason;
+    }
     String currentUserName = securityContext.getUserPrincipal().getName();
     Account account = new Account(currentUserName);
-    account.setReason(Reason.getReason(Integer.parseInt(reason)).getContent());
+    account.setReason(reasonContent);
     if (unSubscribeMktEmail.equals("1"))
       account.setUnsubscibeMarketingEmail(true);
     if (account.checkValid()){

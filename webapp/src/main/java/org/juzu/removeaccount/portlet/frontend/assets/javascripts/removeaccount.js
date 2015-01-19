@@ -45,13 +45,14 @@
 
   function _doRemoveMyAccount(){
     if (typeof _reason == "undefined"){
-      _disPlayInfoMsgCB("Please precise the reason")
+      _disPlayInfoMsgCB("Please precise the reason");
       return;
     }
     _displayLoading(true);
     if (_reason == ""){
       _reason = "Other";
     }
+    _popupConfirmation.hidden();
     var unSubscribeMktEmail = "0";
     if($(".remove-account-unsubscribe-mkt-email").prop("checked"))
       unSubscribeMktEmail = "1";
@@ -72,7 +73,7 @@
 
     $(document).on('click.remove-my-account.btn','button.remove-account-btn',function(){
       if (typeof _reason == "undefined"){
-        _disPlayInfoMsgCB("Please give us the reason");
+        _disPlayInfoMsgCB("Please precise the reason");
         return;
       }
       _popupConfirmation.show();
@@ -85,7 +86,7 @@
     $(document).on('click.remove-my-account-confirm-no','a.btn-remove-account-Confirm-No,a.removeAccountConfirmPopupClose', function () {
       _popupConfirmation.hide();
     });
-    $(document).on('click.remove-account-reason','.remove-account-reason',function(){
+    $(document).on('click.remove-account-reason','input:radio.remove-account-reason',function(){
       _reason = $(this).val();
       if(_reason == 5){
         _reason = $("#reasonOther").val();

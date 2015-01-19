@@ -25,7 +25,7 @@
             <li>
                 <label class="uiRadio">
                     <input type="radio" name="remove-account-reason" class="remove-account-reason" value="5">
-                    <span><input placeholder="Other" type="text" placeholder="Text input" id="reasonOther"></span>
+                    <span><input placeholder="Other" type="text" id="reasonOther"></span>
                 </label>
             </li>
 		</ul>
