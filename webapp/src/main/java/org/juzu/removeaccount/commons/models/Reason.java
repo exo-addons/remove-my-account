@@ -7,8 +7,7 @@ public enum Reason {
   REASON_1(1),
   REASON_2(2),
   REASON_3(3),
-  REASON_4(4),
-  REASON_5(5);
+  REASON_4(4);
 
   private int id;
   private String content;
@@ -27,10 +26,8 @@ public enum Reason {
         return "I'am using another main account exo eXo Community";
       case 3:
         return "i receive too much emails from the Community";
-      case 4:
-        return "After the evaluation, eXo platform is not the solution i am looking for";
       default:
-        return "Other";
+        return "After the evaluation, eXo platform is not the solution i am looking for";
     }
   }
   public static Reason getReason(int id){
@@ -38,6 +35,6 @@ public enum Reason {
       if (type.getId() == id )
         return type;
     }
-    return REASON_5;
+    return REASON_1;
   }
 }

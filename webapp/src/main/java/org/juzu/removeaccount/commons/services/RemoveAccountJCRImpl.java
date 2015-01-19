@@ -31,8 +31,6 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
 
   private static final String  NODE_PROPS_REASON = "exo:reason";
 
-  private static final String  NODE_PROPS_SOC_NETWORK = "exo:soccialnetwork";
-
   private static final String  NODE_PROPS_UNSUBSCRIBE_MKT_EMAIL = "exo:unsubscribe-marketing-email";
 
   @Inject
@@ -63,7 +61,6 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
   private void setNodeProperties(Node aNode,Account account) throws RepositoryException {
     aNode.setProperty(NODE_PROPS_USERNAME,account.getUsername());
     aNode.setProperty(NODE_PROPS_REASON,account.getReason());
-    aNode.setProperty(NODE_PROPS_SOC_NETWORK,account.getSocialNetwork());
     aNode.setProperty(NODE_PROPS_UNSUBSCRIBE_MKT_EMAIL,account.getUnsubscibeMarketingEmail());
   }
   private Account transferNode2Account(Node node) throws RepositoryException {
@@ -80,8 +77,6 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
         account.setUsername(p.getString());
       }else if (name.equals(NODE_PROPS_REASON)){
         account.setReason(p.getString());
-      }else if (name.equals(NODE_PROPS_SOC_NETWORK)){
-        account.setSocialNetwork(p.getString());
       }else if (name.equals(NODE_PROPS_UNSUBSCRIBE_MKT_EMAIL)){
         account.setUnsubscibeMarketingEmail(p.getBoolean());
       }
@@ -94,6 +89,7 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
 
   @Override
   public Account storeAccount(Account account) {
+
     Node homeApp = null;
     try {
       homeApp = this.getOrCreateRemoveAccountAppHome();
@@ -106,9 +102,11 @@ public class RemoveAccountJCRImpl implements RemoveAccountService {
           this.setNodeProperties(accountNode,account);
           homeApp.save();
         }
-
       }
-      return this.transferNode2Account(accountNode);
+      if (null != accountNode){
+        if (null != organizationService.getUserHandler().removeUser(account.getUsername(),true))
+          return this.transferNode2Account(accountNode);
+      }
     } catch (Exception e) {
       log.error("ERR remove account cannot store remove account info ");
       e.getMessage();

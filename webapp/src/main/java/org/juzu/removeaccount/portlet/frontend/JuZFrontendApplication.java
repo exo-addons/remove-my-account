@@ -17,11 +17,14 @@
 package org.juzu.removeaccount.portlet.frontend;
 
 import juzu.Path;
+import juzu.Resource;
 import juzu.Response;
 import juzu.View;
+import juzu.plugin.ajax.Ajax;
 import juzu.request.SecurityContext;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.juzu.removeaccount.commons.models.Account;
 import org.juzu.removeaccount.commons.models.Reason;
 import org.juzu.removeaccount.commons.services.RemoveAccountService;
 
@@ -48,5 +51,19 @@ public class JuZFrontendApplication {
       }
     }
     return Response.ok("something went wrong, cannot get user info");
+  }
+  @Ajax
+  @Resource
+  public Response doRemoveMyAccount(SecurityContext securityContext, String reason, String unSubscribeMktEmail){
+    String currentUserName = securityContext.getUserPrincipal().getName();
+    Account account = new Account(currentUserName);
+    account.setReason(Reason.getReason(Integer.parseInt(reason)).getContent());
+    if (unSubscribeMktEmail.equals("1"))
+      account.setUnsubscibeMarketingEmail(true);
+    if (account.checkValid()){
+      if(null != removeAccountService.storeAccount(account));
+        return Response.ok("http://");
+    }
+    return Response.ok("nok");
   }
 }

@@ -6,11 +6,11 @@ package org.juzu.removeaccount.commons.models;
 public class Account {
   private String username;
   private String reason;
-  private String socialNetwork;
   private Boolean unsubscibeMarketingEmail;
 
   public Account(String username){
     this.setUsername(username);
+    this.setUnsubscibeMarketingEmail(false);
   }
 
   public String getUsername() {
@@ -27,14 +27,6 @@ public class Account {
 
   public void setReason(String reason) {
     this.reason = reason;
-  }
-
-  public String getSocialNetwork() {
-    return socialNetwork;
-  }
-
-  public void setSocialNetwork(String socialNetwork) {
-    this.socialNetwork = socialNetwork;
   }
 
   public Boolean getUnsubscibeMarketingEmail() {

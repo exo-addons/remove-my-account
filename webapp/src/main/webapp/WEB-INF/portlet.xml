@@ -34,14 +34,4 @@
     </portlet-info>
   </portlet>
 
-  <filter>
-    <filter-name>RemoveAccountProfilePortletFilter</filter-name>
-    <filter-class>org.juzu.removeaccount.commons.filters.RemoveAccountPortletFilter</filter-class>
-    <lifecycle>RENDER_PHASE</lifecycle>
-  </filter>
-  <filter-mapping>
-    <filter-name>RemoveAccountProfilePortletFilter</filter-name>
-    <portlet-name>JuzRemoveAccountProfileApplication</portlet-name>
-  </filter-mapping>
-
 </portlet-app>

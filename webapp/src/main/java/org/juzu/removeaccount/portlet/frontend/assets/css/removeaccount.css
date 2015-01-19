@@ -1,0 +1,63 @@
+.juzRemoveAccountAddon {
+    padding: 20px 20px 20px 95px;
+}
+.juzRemoveAccountAddon > .inner {
+    width: 660px;
+}
+.juzRemoveAccountAddon > .inner p {
+    margin: 15px 0;
+}
+.juzRemoveAccountAddon .list-reasons {
+    padding-left: 45px;
+}
+.juzRemoveAccountAddon .list-reasons li {
+    margin-bottom: 10px;
+    list-style: none!important;
+}
+.juzRemoveAccountAddon .list-reasons li .uiRadio > span input[type="text"] {
+    margin-top: -4px;
+    padding: 3px 6px;
+}
+.juzRemoveAccountAddon .list-reasons li .uiRadio > span {
+    margin-left: 5px;
+}
+.juzRemoveAccountAddon .keepOnSocial {
+    padding: 10px 0 30px;
+}
+.juzRemoveAccountAddon .btnSocial{
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-image: url("/remove-account-webapp/images/icon-social.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-indent: -9999px;
+}
+.juzRemoveAccountAddon .btnSocial.google{
+    background-position: 0 0;
+}
+.juzRemoveAccountAddon .btnSocial.facebook{
+    background-position: -64px 0;
+}
+.juzRemoveAccountAddon .btnSocial.twitter{
+    background-position: -128px 0;
+}
+.juzRemoveAccountAddon .btnSocial.linkedin{
+    background-position: -192px 0;
+}
+.juzRemoveAccountAddon .keepOnSocial .btnSocial:first-child {
+    margin-left: 75px;
+}
+.juzRemoveAccountAddon .submitBox .uiCheckbox {
+    margin-left: 0;
+}
+.juzRemoveAccountAddon .submitBox {
+    border-top: 1px solid #cccccc;
+    padding-top: 15px;
+}
+.juzRemoveAccountAddon .submitBox .action {
+    padding-top: 15px;
+}
+.juzRemoveAccountAddon .submitBox .action .btn + .btn {
+    margin-left: 10px;
+}

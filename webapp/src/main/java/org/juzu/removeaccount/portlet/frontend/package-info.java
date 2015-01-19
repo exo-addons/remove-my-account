@@ -25,12 +25,11 @@
         @Script(id = "jquery", value = "jquery/1.10.2/jquery.js"),
         @Script(value = "javascripts/removeaccount.js", depends = "jquery")
 })
+@Stylesheets(@Stylesheet("css/removeaccount.css"))
 @Assets("*")
 package org.juzu.removeaccount.portlet.frontend;
 
-import juzu.plugin.asset.Assets;
-import juzu.plugin.asset.Script;
-import juzu.plugin.asset.Scripts;
+import juzu.plugin.asset.*;
 import juzu.plugin.binding.Binding;
 import juzu.plugin.binding.Bindings;
 import juzu.plugin.portlet.Portlet;

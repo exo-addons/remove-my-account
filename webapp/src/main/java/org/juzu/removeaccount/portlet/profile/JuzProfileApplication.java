@@ -4,6 +4,7 @@ import juzu.Path;
 import juzu.Response;
 import juzu.View;
 import juzu.request.SecurityContext;
+import org.exoplatform.social.webui.Utils;
 
 import javax.inject.Inject;
 
@@ -17,7 +18,9 @@ public class JuzProfileApplication {
   org.juzu.removeaccount.portlet.profile.templates.index indexTpl;
   @View
   public Response index(SecurityContext securityContext){
-    
-    return indexTpl.ok();
+    if(Utils.getViewerRemoteId().equals(Utils.getOwnerRemoteId()))
+      return indexTpl.ok();
+
+    return Response.ok("");
   }
 }

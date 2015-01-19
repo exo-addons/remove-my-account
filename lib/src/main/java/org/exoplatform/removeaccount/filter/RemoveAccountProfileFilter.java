@@ -17,8 +17,8 @@ import java.io.IOException;
 /**
  * Created by anhvt on 14/01/15.
  */
-public class RemoveAccountFilter implements org.exoplatform.web.filter.Filter  {
-  private final static Log log = ExoLogger.getLogger(RemoveAccountFilter.class);
+public class RemoveAccountProfileFilter implements org.exoplatform.web.filter.Filter  {
+  private final static Log log = ExoLogger.getLogger(RemoveAccountProfileFilter.class);
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
     // check if you is already login
