@@ -52,7 +52,7 @@
     if (_reason == ""){
       _reason = "Other";
     }
-    _popupConfirmation.hidden();
+    _popupConfirmation.hide();
     var unSubscribeMktEmail = "0";
     if($(".remove-account-unsubscribe-mkt-email").prop("checked"))
       unSubscribeMktEmail = "1";
@@ -80,6 +80,9 @@
     });
 
     $(document).on('click.remove-my-account-confirm-yes','a.btn-remove-account-Confirm-Yes',function(){
+      if(_reason == 5){
+        _reason = $("#reasonOther").val();
+      }
       _doRemoveMyAccount();
     });
 
@@ -88,10 +91,14 @@
     });
     $(document).on('click.remove-account-reason','input:radio.remove-account-reason',function(){
       _reason = $(this).val();
-      if(_reason == 5){
-        _reason = $("#reasonOther").val();
-      }
     });
+    $(document).on('focus.txt.other.reason','input:text#reasonOther',function(){
+      var parent = $(this).parents(".uiRadio");
+      if(null != parent && typeof parent != "undefined"){
+        parent.children(".remove-account-reason").prop("checked",true);
+        _reason = 5;
+      }
+    })
 
   });
 

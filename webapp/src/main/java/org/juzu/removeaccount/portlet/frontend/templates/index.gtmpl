@@ -23,18 +23,18 @@
 			</li>
             <% } %>
             <li>
-                <label class="uiRadio">
+                    <span class="uiRadio">
                     <input type="radio" name="remove-account-reason" class="remove-account-reason" value="5">
                     <span><input placeholder="Other" type="text" id="reasonOther"></span>
-                </label>
+                </span>
             </li>
 		</ul>
 		<p>I would like to keep in touch on Social media platform:</p>
 		<div class="keepOnSocial clearfix">
-			<a href="#" target="_blank" title="google" class="btnSocial google">&nbps;</a>
-			<a href="#" target="_blank" title="facebook" class="btnSocial facebook">&nbps;</a>
-			<a href="#" target="_blank" title="twitter" class="btnSocial twitter">&nbps;</a>
-			<a href="#" target="_blank" title="linkedin" class="btnSocial linkedin">&nbps;</a>
+			<a href="https://plus.google.com/+ExoplatformTribe" target="_blank" title="google" class="btnSocial google">&nbps;</a>
+			<a href="https://www.facebook.com/eXoPlatform" target="_blank" title="facebook" class="btnSocial facebook">&nbps;</a>
+			<a href="https://twitter.com/eXoPlatform" target="_blank" title="twitter" class="btnSocial twitter">&nbps;</a>
+			<a href="http://www.linkedin.com/company/exo-platform" target="_blank" title="linkedin" class="btnSocial linkedin">&nbps;</a>
 		</div>
 		<div class="submitBox">
 			<label class="uiCheckbox">
