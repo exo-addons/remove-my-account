@@ -69,6 +69,10 @@
     });
   }
   $(document).ready(function () {
+    // tmp , need to remove will have mkto plugin
+    if($("#juzUnsubscribeMktEmailContainer").length > 0){
+      $("#juzUnsubscribeMktEmailContainer").hide();
+    }
     _popupConfirmation = $("#removeAccountConfirmPopupContainer");
 
     $(document).on('click.remove-my-account.btn','button.remove-account-btn',function(){
@@ -98,7 +102,14 @@
         parent.children(".remove-account-reason").prop("checked",true);
         _reason = 5;
       }
-    })
+    });
+    $(document).on('click.remove-my-account.unsubscribe-mkto-email','input:checkbox.remove-account-unsubscribe-mkt-email',function(){
+      try{
+        if ($("input:checkbox.chkboxUnsubscribeMktEmail").length > 0){
+          $("input:checkbox.chkboxUnsubscribeMktEmail").trigger("click");
+        }
+      } catch (e){console.info("cannot trigger to unsubscribe mkto portlet")}
+    });
 
   });
 
