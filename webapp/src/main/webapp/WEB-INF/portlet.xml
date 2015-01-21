@@ -6,31 +6,31 @@
    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
   <portlet>
     <description xml:lang="EN">this application allows user to remove his account</description>
-    <portlet-name>JuZRemoveAccountFrontendPortlet</portlet-name>
-    <display-name xml:lang="EN">Juzu Remove Account Frontend Portlet</display-name>
-    <portlet-class>org.juzu.removeaccount.portlet.frontend.FrontendPortlet</portlet-class>
+    <portlet-name>JuZRemoveMyAccountFrontendPortlet</portlet-name>
+    <display-name xml:lang="EN">Juzu Remove My Account Frontend Portlet</display-name>
+    <portlet-class>org.juzu.removemyaccount.portlet.frontend.FrontendPortlet</portlet-class>
     <supports>
       <mime-type>text/html</mime-type>
     </supports>
     <portlet-info>
-      <title>Remove Account Application</title>
-      <short-title>Remove Account Portlet</short-title>
-      <keywords>remove-account-webapp</keywords>
+      <title>Juz Remove My Account Application</title>
+      <short-title>Juz Remove My Account Portlet</short-title>
+      <keywords>remove-my-account-webapp</keywords>
     </portlet-info>
   </portlet>
 
   <portlet>
     <description xml:lang="EN">this application allows to add remove-account button in profile page</description>
     <portlet-name>JuzRemoveAccountProfileApplication</portlet-name>
-    <display-name xml:lang="EN">Juzu Remove Account Profile Portlet</display-name>
-    <portlet-class>org.juzu.removeaccount.portlet.profile.ProfilePorlet</portlet-class>
+    <display-name xml:lang="EN">Juzu Remove My Account Profile Portlet</display-name>
+    <portlet-class>org.juzu.removemyaccount.portlet.profile.ProfilePorlet</portlet-class>
     <supports>
       <mime-type>text/html</mime-type>
     </supports>
     <portlet-info>
-      <title>Remove Account Profile Application</title>
-      <short-title>Remove Account Profile Portlet</short-title>
-      <keywords>remove-account-webapp</keywords>
+      <title>Remove My Account Profile Application</title>
+      <short-title>Remove My Account Profile Portlet</short-title>
+      <keywords>remove-my-account-webapp</keywords>
     </portlet-info>
   </portlet>
 

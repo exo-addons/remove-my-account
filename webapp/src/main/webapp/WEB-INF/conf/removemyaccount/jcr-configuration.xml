@@ -32,7 +32,7 @@
         <values-param>
           <name>autoCreatedInNewRepository</name>
           <description>Node types configuration file</description>
-          <value>war:/conf/removeaccount/remove-account-nodetypes.xml</value>
+          <value>war:/conf/removemyaccount/remove-my-account-nodetypes.xml</value>
         </values-param>
       </init-params>
     </component-plugin>

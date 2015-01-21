@@ -14,7 +14,7 @@
         <include>${project.groupId}:remove-account-webapp:war</include>
       </includes>
       <scope>provided</scope>
-      <outputFileNameMapping>remove-account-webapp.war</outputFileNameMapping>
+      <outputFileNameMapping>remove-my-account-webapp.war</outputFileNameMapping>
     </dependencySet>
     <!-- Libraries -->
     <dependencySet>

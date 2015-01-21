@@ -6,11 +6,11 @@
   <priority>100</priority>
   <page-nodes>
     <node>
-      <uri>remove-account</uri>
-      <name>remove-account</name>
-      <label>Remove Account</label>
+      <uri>remove-my-account</uri>
+      <name>remove-my-account</name>
+      <label>Remove My Account</label>
       <visibility>HIDDEN</visibility>
-      <page-reference>portal::intranet::remove-account</page-reference>
+      <page-reference>portal::intranet::remove-my-account</page-reference>
     </node>
   </page-nodes>
 </node-navigation>

@@ -38,7 +38,7 @@
           <object type="org.exoplatform.web.filter.FilterDefinition">
             <!-- The filter instance -->
             <field name="filter">
-              <object type="org.exoplatform.removeaccount.filter.RemoveAccountProfileFilter"/>
+              <object type="org.exoplatform.removemyaccount.filter.RemoveMyAccountProfileFilter"/>
             </field>
             <!-- The mapping to use -->
             <!-- WARNING: the mapping is expressed with regular expressions -->
@@ -71,7 +71,7 @@
           <object type="org.exoplatform.web.filter.FilterDefinition">
             <!-- The filter instance -->
             <field name="filter">
-              <object type="org.exoplatform.removeaccount.filter.RemoveAccountSuccessFilter"/>
+              <object type="org.exoplatform.removemyaccount.filter.RemoveMyAccountSuccessFilter"/>
             </field>
             <!-- The mapping to use -->
             <!-- WARNING: the mapping is expressed with regular expressions -->

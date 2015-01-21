@@ -1,4 +1,4 @@
-package org.exoplatform.removeaccount.filter;
+package org.exoplatform.removemyaccount.filter;
 
 import org.exoplatform.services.log.ExoLogger;
 import org.exoplatform.services.log.Log;
@@ -15,8 +15,8 @@ import java.io.IOException;
 /**
  * Created by exoplatform on 19/01/15.
  */
-public class RemoveAccountSuccessFilter implements org.exoplatform.web.filter.Filter  {
-  private final static Log log = ExoLogger.getLogger(RemoveAccountSuccessFilter.class);
+public class RemoveMyAccountSuccessFilter implements org.exoplatform.web.filter.Filter  {
+  private final static Log log = ExoLogger.getLogger(RemoveMyAccountSuccessFilter.class);
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
     HttpServletRequest req = (HttpServletRequest) servletRequest;

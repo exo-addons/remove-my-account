@@ -8,8 +8,8 @@
     <version>4</version>
     <relativePath />
   </parent>
-  <groupId>org.exoplatform.addons.remove-account</groupId>
-  <artifactId>remove-account-addon</artifactId>
+  <groupId>org.exoplatform.addons.remove-my-account</groupId>
+  <artifactId>remove-my-account-addon</artifactId>
   <version>1.0.x-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Remove Account</name>
@@ -21,10 +21,10 @@
     <module>bundle</module>
   </modules>
   <!--scm>
-    <connection>scm:git:git://github.com/exo-addons/remove-account.git</connection>
-    <developerConnection>scm:git:git@github.com:exo-addons/remove-account.git</developerConnection>
+    <connection>scm:git:git://github.com/exo-addons/remove-my-account.git</connection>
+    <developerConnection>scm:git:git@github.com:exo-addons/remove-my-account.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/exo-addons/remove-account.git</url>
+    <url>https://github.com/exo-addons/remove-my-account.git</url>
   </scm-->
   <properties>
     <exoplatform.version>4.1-M2</exoplatform.version>
@@ -179,18 +179,18 @@
       </dependency>
 
       <dependency>
-        <groupId>org.exoplatform.addons.remove-account</groupId>
-        <artifactId>remove-account-lib</artifactId>
+        <groupId>org.exoplatform.addons.remove-my-account</groupId>
+        <artifactId>remove-my-account-lib</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.exoplatform.addons.remove-account</groupId>
-        <artifactId>remove-account-webapp</artifactId>
+        <groupId>org.exoplatform.addons.remove-my-account</groupId>
+        <artifactId>remove-my-account-webapp</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.exoplatform.addons.remove-account</groupId>
-        <artifactId>remove-account-config</artifactId>
+        <groupId>org.exoplatform.addons.remove-my-account</groupId>
+        <artifactId>remove-my-account-config</artifactId>
         <version>${project.version}</version>
       </dependency>
 

@@ -5,15 +5,15 @@
         xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_2">
 
   <page>
-    <name>remove-account</name>
-    <title>Remove Account</title>
+    <name>remove-my-account</name>
+    <title>Remove My Account</title>
     <access-permissions>*:/platform/users</access-permissions>
     <edit-permission>*:/platform/administrators</edit-permission>
     <show-max-window>false</show-max-window>
     <portlet-application>
       <portlet>
-        <application-ref>remove-account-webapp</application-ref>
-        <portlet-ref>JuZRemoveAccountFrontendPortlet</portlet-ref>
+        <application-ref>remove-my-account-webapp</application-ref>
+        <portlet-ref>JuZRemoveMyAccountFrontendPortlet</portlet-ref>
       </portlet>
       <access-permissions>*:/platform/users</access-permissions>
       <show-info-bar>false</show-info-bar>

@@ -1,4 +1,4 @@
-package org.exoplatform.removeaccount.filter;
+package org.exoplatform.removemyaccount.filter;
 
 import org.exoplatform.commons.utils.CommonsUtils;
 import org.exoplatform.services.log.ExoLogger;
@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by anhvt on 14/01/15.
+ * Created by exoplatform on 14/01/15.
  */
-public class RemoveAccountProfileFilter implements org.exoplatform.web.filter.Filter  {
-  private final static Log log = ExoLogger.getLogger(RemoveAccountProfileFilter.class);
+public class RemoveMyAccountProfileFilter implements org.exoplatform.web.filter.Filter  {
+  private final static Log log = ExoLogger.getLogger(RemoveMyAccountProfileFilter.class);
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
     // check if you is already login

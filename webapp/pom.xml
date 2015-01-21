@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>remove-account-addon</artifactId>
-    <groupId>org.exoplatform.addons.remove-account</groupId>
+    <artifactId>remove-my-account-addon</artifactId>
+    <groupId>org.exoplatform.addons.remove-my-account</groupId>
     <version>1.0.x-SNAPSHOT</version>
   </parent>
-  <artifactId>remove-account-webapp</artifactId>
+  <artifactId>remove-my-account-webapp</artifactId>
   <packaging>war</packaging>
-  <name>remove-account - Webapp</name>
+  <name>remove-my-account - Webapp</name>
   <description>Remove Account - portlet webapp</description>
   <dependencies>
 
@@ -129,7 +129,7 @@
   </dependencies>
 
   <build>
-    <finalName>remove-account-webapp</finalName>
+    <finalName>remove-my-account-webapp</finalName>
     <!-- Precompile the template class in maven (this is optional) -->
     <plugins>
 
