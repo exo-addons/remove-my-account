@@ -13,6 +13,12 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>remove-my-account-lib</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>remove-my-account-webapp</artifactId>
       <version>${project.version}</version>
       <type>war</type>

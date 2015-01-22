@@ -11,7 +11,7 @@
       <useProjectArtifact>false</useProjectArtifact>
       <outputDirectory>/</outputDirectory>
       <includes>
-        <include>${project.groupId}:remove-account-webapp:war</include>
+        <include>${project.groupId}:remove-my-account-webapp:war</include>
       </includes>
       <scope>provided</scope>
       <outputFileNameMapping>remove-my-account-webapp.war</outputFileNameMapping>
