@@ -1,0 +1,72 @@
+#{param name=email/}
+#{param name=reasons/}
+
+<div style="margin: auto; z-index: 1600; position: absolute; left: 683px; top: 320.5px;" id="JuzRemoveAccountAjaxLoadingMask" class="ajaxLoadingMask clearfix hide">
+    <a class="uiIconClose uiIconWhite pull-right" onclick="javascript:ajaxAbort();"></a>
+    <i class="loadingProgressBar pull-left"></i>
+    <div class="loadingText">Loading...</div>
+</div>
+<div class="juzRemoveAccountAddon">
+    <div class="alert" id="JuzRemoveAccountAlertContainer" style="visibility:hidden;">
+    </div>
+
+	<div class="inner">
+		<h4>It’s been a pleasure to have you here!</h4>
+		<p>I would like to remove permanantely my account <%=email%> and the associated data because:</p>
+		<ul class="list-reasons">
+            <% reasons.each { reason -> %>
+			<li>
+				<label class="uiRadio">
+					<input type="radio" name="remove-account-reason" class="remove-account-reason" value="<%=reason.getId()%>">
+					<span><%= reason.getContent()%></span>
+				</label>
+			</li>
+            <% } %>
+            <li>
+                    <span class="uiRadio">
+                    <input type="radio" name="remove-account-reason" class="remove-account-reason" value="5">
+                    <span><input placeholder="Other" type="text" id="reasonOther"></span>
+                </span>
+            </li>
+		</ul>
+		<p>I would like to keep in touch on Social media platform:</p>
+		<div class="keepOnSocial clearfix">
+			<a href="https://plus.google.com/+ExoplatformTribe" target="_blank" title="google" class="btnSocial google">&nbps;</a>
+			<a href="https://www.facebook.com/eXoPlatform" target="_blank" title="facebook" class="btnSocial facebook">&nbps;</a>
+			<a href="https://twitter.com/eXoPlatform" target="_blank" title="twitter" class="btnSocial twitter">&nbps;</a>
+			<a href="http://www.linkedin.com/company/exo-platform" target="_blank" title="linkedin" class="btnSocial linkedin">&nbps;</a>
+		</div>
+		<div class="submitBox">
+			<label class="uiCheckbox">
+				<input type="checkbox" class="checkbox remove-account-unsubscribe-mkt-email" style="display:none;">
+				<span>Unsubcribe me from the eXo marketing emails.</span>
+			</label>
+			<br>
+			<div class="action">
+				<button class="btn btn-primary remove-account-btn">Delete my account</button>
+				<a class="btn" href="/portal/intranet/profile">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="removeAccountConfirmPopupContainer" class="UIPopupWindow UIDragObject uiPopup modal hide" style="display: none;position: fixed; top: 140px; visibility: visible; width: 550px;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="myModal3">
+    <div class="popupHeader ClearFix">
+        <a data-dismiss="modal" class="uiIconClose pull-right removeAccountConfirmPopupClose" title="Close Window"></a>
+        <span class="PopupTitle popupTitle">
+            Confirmation
+        </span>
+    </div>
+    <div class="PopupContent popupContent">
+        <ul class="singleMessage popupMessage resizable">
+            <li>
+                <span class="confirmationIcon">
+                    Are you sure to remove your account from eXo Tribe ?
+                </span>
+            </li>
+        </ul>
+        <div class="uiAction uiActionBorder">
+            <a data-dismiss="modal" href="javascript:void(0);" class="btn btn-remove-account-Confirm-Yes">OK</a>
+            <a data-dismiss="modal" href="javascript:void(0);" class="btn btn-remove-account-Confirm-No">Cancel</a>
+        </div>
+    </div>
+</div>
