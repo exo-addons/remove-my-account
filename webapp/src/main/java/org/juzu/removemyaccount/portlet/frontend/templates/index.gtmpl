@@ -37,8 +37,8 @@
 			<a href="http://www.linkedin.com/company/exo-platform" target="_blank" title="linkedin" class="btnSocial linkedin">&nbps;</a>
 		</div>
 		<div class="submitBox">
-			<label class="uiCheckbox">
-				<input type="checkbox" class="checkbox remove-account-unsubscribe-mkt-email" style="display:none;">
+			<label class="uiCheckbox remove-account-unsubscribe-mkt-email-chkbox-container" style="display:none;">
+				<input type="checkbox" class="checkbox remove-account-unsubscribe-mkt-email">
 				<span>Unsubcribe me from the eXo marketing emails.</span>
 			</label>
 			<br>
