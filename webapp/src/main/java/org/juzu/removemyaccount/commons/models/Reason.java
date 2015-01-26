@@ -21,13 +21,13 @@ public enum Reason {
   public String getContent(){
     switch (this.id){
       case 1:
-        return "I did not find the information, help, support, i was looking for";
+        return "You did not find the information, help, support you are looking for";
       case 2:
-        return "I'am using another main account exo eXo Community";
+        return "You are using another account";
       case 3:
-        return "i receive too much emails from the Community";
+        return "You receive too many emails";
       default:
-        return "After the evaluation, eXo platform is not the solution i am looking for";
+        return "After Evaluation, eXo Platform is not the solution are looking for";
     }
   }
   public static Reason getReason(int id){

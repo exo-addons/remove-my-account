@@ -12,7 +12,7 @@
 
 	<div class="inner">
 		<h4>It’s been a pleasure to have you here!</h4>
-		<p>I would like to remove permanantely my account <%=email%> and the associated data because:</p>
+		<p>We are about to permanently remove your eXo Tribe account (<%=email%>) and the associated data. The main reason is :</p>
 		<ul class="list-reasons">
             <% reasons.each { reason -> %>
 			<li>
@@ -29,7 +29,7 @@
                 </span>
             </li>
 		</ul>
-		<p>I would like to keep in touch on Social media platform:</p>
+		<p>You can still keep in touch with eXo on social media:</p>
 		<div class="keepOnSocial clearfix">
 			<a href="https://plus.google.com/+ExoplatformTribe" target="_blank" title="google" class="btnSocial google">&nbps;</a>
 			<a href="https://www.facebook.com/eXoPlatform" target="_blank" title="facebook" class="btnSocial facebook">&nbps;</a>
@@ -39,7 +39,7 @@
 		<div class="submitBox">
 			<label class="uiCheckbox remove-account-unsubscribe-mkt-email-chkbox-container" style="display:none;">
 				<input type="checkbox" class="checkbox remove-account-unsubscribe-mkt-email">
-				<span>Unsubcribe me from the eXo marketing emails.</span>
+				<span>Also unsubscribe from eXo marketing emails</span>
 			</label>
 			<br>
 			<div class="action">
