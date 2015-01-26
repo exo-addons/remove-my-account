@@ -101,8 +101,10 @@ public class RemoveMyAccountJCRImpl implements RemoveMyAccountService {
         }
       }
       if (null != accountNode){
-        if (null != organizationService.getUserHandler().removeUser(account.getUsername(),true))
+        if (null != organizationService.getUserHandler().removeUser(account.getUsername(),false))
           return this.transferNode2Account(accountNode);
+        else
+          log.error("ERR remove account => cannot remove user");
       }
     } catch (Exception e) {
       log.error("ERR remove account cannot store remove account info ");
