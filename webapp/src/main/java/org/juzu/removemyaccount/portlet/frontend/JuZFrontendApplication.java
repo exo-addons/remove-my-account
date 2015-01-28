@@ -45,7 +45,7 @@ public class JuZFrontendApplication {
     JSONObject info = removeMyAccountService.getInfoUser(currentUserName);
     if (null != info){
       try {
-        return indexTpl.with().set("email",info.get("email")).set("reasons", Reason.values()).ok();
+        return indexTpl.with().set("email",info.get("email")).set("reasons", Reason.values()).set("username",currentUserName).ok();
       } catch (JSONException e) {
         e.printStackTrace();
       }

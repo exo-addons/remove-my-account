@@ -1,5 +1,6 @@
 #{param name=email/}
 #{param name=reasons/}
+#{param name=username/}
 
 <div style="margin: auto; z-index: 1600; position: absolute; left: 683px; top: 320.5px;" id="JuzRemoveAccountAjaxLoadingMask" class="ajaxLoadingMask clearfix hide">
     <a class="uiIconClose uiIconWhite pull-right" onclick="javascript:ajaxAbort();"></a>
@@ -11,7 +12,7 @@
     </div>
 
 	<div class="inner">
-		<h4>It’s been a pleasure to have you here!</h4>
+		<h4>Is this an "Au Revoir"...? The Tribe would miss you.</h4>
 		<p>We are about to permanently remove your eXo Tribe account (<%=email%>) and the associated data. The main reason is :</p>
 		<ul class="list-reasons">
             <% reasons.each { reason -> %>
@@ -43,7 +44,7 @@
 			</label>
 			<br>
 			<div class="action">
-				<button class="btn btn-primary remove-account-btn">Delete my account</button>
+				<button class="btn btn-primary remove-account-btn">Remove Account</button>
 				<a class="btn" href="/portal/intranet/profile">Cancel</a>
 			</div>
 		</div>
