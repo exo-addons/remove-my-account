@@ -110,10 +110,5 @@
         }
       } catch (e){console.info("cannot trigger to unsubscribe mkto portlet")}
     });
-
-    if($('#UIProfile').length > 0){
-      $('#UIProfile').css("height","");
-    }
-
   });
 })($);
