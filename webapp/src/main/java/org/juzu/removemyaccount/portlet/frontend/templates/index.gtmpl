@@ -50,7 +50,7 @@
 		</div>
 	</div>
 </div>
-<div id="removeAccountConfirmPopupContainer" class="UIPopupWindow uiPopup modal hide" style="display: none;position: fixed; top: 20%; visibility: visible; width: 550px;left:50%;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="myModal3">
+<div id="removeAccountConfirmPopupContainer" class="UIPopupWindow uiPopup modal hide" style="display: none;position: fixed; top: 50%; visibility: visible; width: 550px;left:50%;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="myModal3">
     <div class="popupHeader ClearFix">
         <a data-dismiss="modal" class="uiIconClose pull-right removeAccountConfirmPopupClose" title="Close Window"></a>
         <span class="PopupTitle popupTitle">
