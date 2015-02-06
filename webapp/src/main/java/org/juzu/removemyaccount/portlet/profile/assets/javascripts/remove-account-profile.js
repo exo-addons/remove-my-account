@@ -10,7 +10,7 @@
     _nbRelocation++;
     if(_nbRelocation < 10){
       if(profileDOM.length > 0){
-        if(profileDOM.children(btnId).length < 0) {
+        if(profileDOM.children(btnId).length <= 0) {
           btnContainerDOM.appendTo(profileDOM);
         }else{
           _reLocated();
