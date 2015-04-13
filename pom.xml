@@ -20,12 +20,12 @@
     <module>webapp</module>
     <module>bundle</module>
   </modules>
-  <!--scm>
+  <scm>
     <connection>scm:git:git://github.com/exo-addons/remove-my-account.git</connection>
     <developerConnection>scm:git:git@github.com:exo-addons/remove-my-account.git</developerConnection>
     <tag>HEAD</tag>
     <url>https://github.com/exo-addons/remove-my-account.git</url>
-  </scm-->
+  </scm>
   <properties>
     <exoplatform.version>4.2.0-M2</exoplatform.version>
     <juzu.version>1.0.0-cr1</juzu.version>
