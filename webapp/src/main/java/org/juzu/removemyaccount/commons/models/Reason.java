@@ -27,7 +27,7 @@ public enum Reason {
       case 3:
         return "You receive too many emails";
       default:
-        return "After Evaluation, eXo Platform is not the solution are looking for";
+        return "After evaluation, eXo Platform is not the solution you are looking for";
     }
   }
   public static Reason getReason(int id){
