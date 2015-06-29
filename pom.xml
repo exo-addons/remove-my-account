@@ -10,7 +10,7 @@
   </parent>
   <groupId>org.exoplatform.addons.remove-my-account</groupId>
   <artifactId>remove-my-account-addon</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.x-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Remove Account</name>
   <description>allow user to remove his account</description>
@@ -23,7 +23,7 @@
   <scm>
     <connection>scm:git:git://github.com/exo-addons/remove-my-account.git</connection>
     <developerConnection>scm:git:git@github.com:exo-addons/remove-my-account.git</developerConnection>
-    <tag>1.0.1</tag>
+    <tag>HEAD</tag>
     <url>https://github.com/exo-addons/remove-my-account.git</url>
   </scm>
   <properties>
