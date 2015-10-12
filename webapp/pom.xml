@@ -54,6 +54,7 @@
     <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-plugins-less4j</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>
@@ -76,6 +77,7 @@
     <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-plugins-portlet</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.exoplatform.kernel</groupId>
