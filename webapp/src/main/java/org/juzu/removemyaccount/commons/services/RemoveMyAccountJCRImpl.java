@@ -1,5 +1,8 @@
 package org.juzu.removemyaccount.commons.services;
 
+import org.exoplatform.container.PortalContainer;
+import org.exoplatform.container.component.ComponentRequestLifecycle;
+import org.exoplatform.container.component.RequestLifeCycle;
 import org.exoplatform.services.jcr.ext.app.SessionProviderService;
 import org.exoplatform.services.jcr.ext.common.SessionProvider;
 import org.exoplatform.services.jcr.ext.hierarchy.NodeHierarchyCreator;
@@ -101,10 +104,15 @@ public class RemoveMyAccountJCRImpl implements RemoveMyAccountService {
         }
       }
       if (null != accountNode){
-        if (null != organizationService.getUserHandler().removeUser(account.getUsername(),false))
-          return this.transferNode2Account(accountNode);
-        else
-          log.error("ERR remove account => cannot remove user");
+        RequestLifeCycle.begin((ComponentRequestLifecycle) this.organizationService);
+        try{
+          if (null != organizationService.getUserHandler().removeUser(account.getUsername(),false))
+            return this.transferNode2Account(accountNode);
+          else
+            log.error("ERR remove account => cannot remove user");
+        }finally {
+          RequestLifeCycle.end();
+        }
       }
     } catch (Exception e) {
       log.error("ERR remove account cannot store remove account info ");
