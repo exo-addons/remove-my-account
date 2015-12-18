@@ -106,7 +106,7 @@ public class RemoveMyAccountJCRImpl implements RemoveMyAccountService {
       if (null != accountNode){
         RequestLifeCycle.begin((ComponentRequestLifecycle) this.organizationService);
         try{
-          if (null != organizationService.getUserHandler().removeUser(account.getUsername(),false))
+          if (null != organizationService.getUserHandler().removeUser(account.getUsername(),true))
             return this.transferNode2Account(accountNode);
           else
             log.error("ERR remove account => cannot remove user");
