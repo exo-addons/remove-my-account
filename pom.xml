@@ -5,12 +5,12 @@
   <parent>
     <artifactId>addons-parent-pom</artifactId>
     <groupId>org.exoplatform.addons</groupId>
-    <version>4</version>
+    <version>7</version>
     <relativePath />
   </parent>
   <groupId>org.exoplatform.addons.remove-my-account</groupId>
   <artifactId>remove-my-account-addon</artifactId>
-  <version>1.0.x-SNAPSHOT</version>
+  <version>1.1.x-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Remove Account</name>
   <description>allow user to remove his account</description>
@@ -27,8 +27,8 @@
     <url>https://github.com/exo-addons/remove-my-account.git</url>
   </scm>
   <properties>
-    <exoplatform.version>4.3.0-M3</exoplatform.version>
-    <juzu.version>1.1.0-M1</juzu.version>
+    <exoplatform.version>5.0.x-SNAPSHOT</exoplatform.version>
+    <juzu.version>1.1.0</juzu.version>
 
     <!-- Dependency versions -->
     <junit.version>4.8.2</junit.version>
