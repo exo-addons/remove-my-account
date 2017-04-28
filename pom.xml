@@ -16,7 +16,6 @@
   <description>allow user to remove his account</description>
   <modules>
     <module>lib</module>
-    <module>config</module>
     <module>webapp</module>
     <module>bundle</module>
   </modules>
@@ -38,18 +37,6 @@
 
 
   </properties>
-
-  <!--distributionManagement>
-    <repository>
-      <id>repository.exoplatform.org</id>
-      <url>http://repository.exoplatform.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>repository.exoplatform.org</id>
-      <url>http://repository.exoplatform.org/content/repositories/juzu-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement-->
-
   <dependencyManagement>
     <dependencies>
       <!-- Application dependencies-->
@@ -60,44 +47,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
-<!--      <dependency>
-        <groupId>org.gatein.portal</groupId>
-        <artifactId>exo.portal.component.web.api</artifactId>
-        <version>${exo.portal.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.commons</groupId>
-        <artifactId>commons-component-common</artifactId>
-        <version>${exoplatform.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.core</groupId>
-        <artifactId>exo.core.component.organization.api</artifactId>
-        <version>${exo.core.component.organization.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.social</groupId>
-        <artifactId>social-component-core</artifactId>
-        <version>${exo.core.component.social.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.social</groupId>
-        <artifactId>social-component-webui</artifactId>
-        <version>${exo.component.social.webui.version}</version>
-        <scope>provided</scope>
-      </dependency>-->
-      <!--dependency>
-        <groupId>org.exoplatform.platform</groupId>
-        <artifactId>platform</artifactId>
-        <version>${exoplatform.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency-->
       <dependency>
         <groupId>org.juzu</groupId>
         <artifactId>juzu-core</artifactId>
@@ -123,61 +72,6 @@
         <artifactId>jquery</artifactId>
         <version>1.10.2</version>
       </dependency>
-<!--      <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-        <version>20070829</version>
-      </dependency>-->
-<!--      <dependency>
-        <groupId>javax.portlet</groupId>
-        <artifactId>portlet-api</artifactId>
-        <version>2.0</version>
-      </dependency>-->
-<!--      <dependency>
-        <groupId>org.juzu</groupId>
-        <artifactId>juzu-plugins-portlet</artifactId>
-        <version>${juzu.version}</version>
-      </dependency>-->
-<!--
-      <dependency>
-        <groupId>org.exoplatform.kernel</groupId>
-        <artifactId>exo.kernel.container</artifactId>
-        <version>2.4.x-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-        <groupId>org.exoplatform.jcr</groupId>
-        <artifactId>exo.jcr.component.ext</artifactId>
-        <version>1.15.x-SNAPSHOT</version>
-      </dependency>
-
-      &lt;!&ndash; Groovy is shipped with GateIn &ndash;&gt;
-      <dependency>
-        <groupId>org.codehaus.groovy</groupId>
-        <artifactId>groovy-all</artifactId>
-        <version>1.7.6</version>
-      </dependency>
--->
-
-      <!-- Servlet 3.x API -->
-<!--
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>3.0.1</version>
-      </dependency>
-
-      &lt;!&ndash; Dependencies for Guice in GateIn portal &ndash;&gt;
-      <dependency>
-        <groupId>javax.inject</groupId>
-        <artifactId>javax.inject</artifactId>
-        <version>1</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.inject</groupId>
-        <artifactId>guice</artifactId>
-        <version>3.0</version>
-      </dependency>
--->
 
       <dependency>
         <groupId>org.exoplatform.addons.remove-my-account</groupId>
@@ -189,12 +83,6 @@
         <artifactId>remove-my-account-webapp</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.exoplatform.addons.remove-my-account</groupId>
-        <artifactId>remove-my-account-config</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-
     </dependencies>
   </dependencyManagement>
   <profiles>
